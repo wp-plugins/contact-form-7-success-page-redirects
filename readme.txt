@@ -27,6 +27,11 @@ Please note that [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
 
 If you have a feature suggestion, I'd love to hear about it. Feel free to leave a message on the "Support" tab of the plugin page, and I'll follow up as soon as possible.
 
+= Why are my forms no longer using Ajax, when I install this plugin? =
+
+In order to ensure that all forms are submitted properly, and that users can be redirected to success pages from some of your forms, we have had to disable Contact Form 7's JavaScript for all forms. This means that you won't be able to use Ajax to submit forms. In future updates, we hope to change this functionality, so that Ajax is only disabled for the forms that have a redirect page defined. Please note that disabling CF7's JavaScript does not affect your forms' ability to send messages properly.
+
+
 == Screenshots ==
 
 1. The plugin will add a "Redirect to:" dropdown that contains all of your existing pages as options. This is set on each of the "Edit Contact Form" pages.
@@ -34,8 +39,8 @@ If you have a feature suggestion, I'd love to hear about it. Feel free to leave 
 == Changelog ==
 
 = 1.1.1 =
-* Disable JavaScript for WPCF7 completely
 * Fixes an issue that prevented some forms from submitting and redirecting
+* Disables JavaScript for WPCF7 completely
 
 = 1.1.0 =
 * Initial version
