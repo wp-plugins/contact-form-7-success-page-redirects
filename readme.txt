@@ -21,7 +21,7 @@ An add-on for Contact Form 7 (CF7) that provides a straightforward method to red
 1. Upload the inner 'contact-form-7-success-page-redirects' directory to the '/wp-content/plugins/' directory on your web server.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
-Please note that [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) must be installed and activated in order for this plugin to be functional.
+Please note that [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) (version 3.9 or later) must be installed and activated in order for this plugin to be functional.
 
 == Frequently Asked Questions ==
 
@@ -31,7 +31,7 @@ If you have a feature suggestion, I'd love to hear about it. Feel free to leave 
 
 = Why are my forms no longer using Ajax, when I install this plugin? =
 
-In order to ensure that all forms are submitted properly, and that users can be redirected to success pages from some of your forms, we have had to disable Contact Form 7's JavaScript for all forms. This means that you won't be able to use Ajax to submit forms. In future updates, we hope to change this functionality, so that Ajax is only disabled for the forms that have a redirect page defined. Please note that disabling CF7's JavaScript does not affect your forms' ability to send messages properly.
+In order to ensure that all forms are submitted properly, and that users can be redirected to success pages from some of your forms, I have had to disable Contact Form 7's JavaScript for all forms. This means that you won't be able to use Ajax to submit forms. In future updates, I hope to change this functionality, so that Ajax is only disabled for the forms that have a redirect page defined. Please note that disabling CF7's JavaScript does not affect your forms' ability to send messages properly.
 
 
 == Screenshots ==
