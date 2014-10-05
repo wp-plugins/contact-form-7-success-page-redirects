@@ -7,7 +7,6 @@
  * Author URI: http://www.ryannevius.com
  * License: GPLv3
  */
-
 /**
  * Verify that CF7 is active.
  */
@@ -15,6 +14,9 @@ function cf7_success_page_admin_notice() {
     if ( !is_plugin_active('contact-form-7/wp-contact-form-7.php') ) {
 	    echo '<div class="error"><p>Contact Form 7 is not activated. The Contact Form 7 Plugin must be installed and activated before you can use Success Page Redirects.</p></div>';
 	}
+	// if ( (int)preg_replace('/[.]/', '', get_plugin_data( plugins_url() . '/contact-form-7/wp-contact-form-7.php', false, false)['Version']) < 394 ) {
+		// echo '<div class="error"><p><strong>Warning: </strong>Contact Form 7 - Success Page Redirects requires that you have the latest version of Contact Form 7 installed. Please upgrade now.</p></div>';
+	// }
 }
 add_action( 'admin_notices', 'cf7_success_page_admin_notice' );
 
@@ -81,6 +83,6 @@ function cf7_success_page_form_submitted( $cf7 ) {
 	    die();
 	}
 }
-add_action( 'wpcf7_mail_failed', 'cf7_success_page_form_submitted' );
+add_action( 'wpcf7_mail_sent', 'cf7_success_page_form_submitted' );
 
 ?>
