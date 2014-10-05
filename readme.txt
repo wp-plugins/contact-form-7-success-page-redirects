@@ -30,3 +30,17 @@ If you have a feature suggestion, I'd love to hear about it. Feel free to leave 
 == Screenshots ==
 
 1. The plugin will add a "Redirect to:" dropdown that contains all of your existing pages as options. This is set on each of the "Edit Contact Form" pages.
+
+== Changelog ==
+
+= 1.1.1 =
+* Disable JavaScript for WPCF7 completely
+* Fixes an issue that prevented some forms from submitting and redirecting
+
+= 1.1.0 =
+* Initial version
+
+== Upgrade Notice ==
+
+= 1.1.1 =
+This version fixes an issue that prevented some forms from submitting. Please upgrade to ensure all CF7 messages are sent.

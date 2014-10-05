@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Contact Form 7 - Success Page Redirects
  * Description: An add-on for Contact Form 7 that provides a straightforward method to redirect visitors to success pages or thank you pages.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Ryan Nevius
  * Author URI: http://www.ryannevius.com
  * License: GPLv3
@@ -17,6 +17,11 @@ function cf7_success_page_admin_notice() {
 	}
 }
 add_action( 'admin_notices', 'cf7_success_page_admin_notice' );
+
+/**
+ * Disable Contacr Form 7 JavaScript completely
+ */
+add_filter( 'wpcf7_load_js', '__return_false' );
 
 
 /**
@@ -76,6 +81,6 @@ function cf7_success_page_form_submitted( $cf7 ) {
 	    die();
 	}
 }
-add_action( 'wpcf7_mail_sent', 'cf7_success_page_form_submitted' );
+add_action( 'wpcf7_mail_failed', 'cf7_success_page_form_submitted' );
 
 ?>
