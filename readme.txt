@@ -13,6 +13,8 @@ An add-on for Contact Form 7 that provides a straightforward method to redirect 
 
 An add-on for Contact Form 7 (CF7) that provides a straightforward method to redirect visitors to success pages or thank you pages, if their messages are successfully delivered. If no message is sent, or if there is an error with the form, the user will not be redirected.
 
+**NOTE:** This plugin requires Contact Form 7 version 3.9 or later. 
+
 == Installation ==
 
 1. Unzip the downloaded plugin archive.
