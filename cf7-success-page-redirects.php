@@ -2,26 +2,36 @@
 /**
  * Plugin Name: Contact Form 7 - Success Page Redirects
  * Description: An add-on for Contact Form 7 that provides a straightforward method to redirect visitors to success pages or thank you pages.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: Ryan Nevius
  * Author URI: http://www.ryannevius.com
  * License: GPLv3
  */
+
 /**
- * Verify that CF7 is active.
+ * Verify CF7 dependencies.
  */
 function cf7_success_page_admin_notice() {
-    if ( !is_plugin_active('contact-form-7/wp-contact-form-7.php') ) {
+	// Verify that CF7 is active and updated to the required version (currently 3.9.0)
+	if ( is_plugin_active('contact-form-7/wp-contact-form-7.php') ) {
+		$wpcf7_path = plugin_dir_path( dirname(__FILE__) ) . 'contact-form-7/wp-contact-form-7.php';
+		$wpcf7_plugin_data = get_plugin_data( $wpcf7_path, false, false);
+		$wpcf7_version = (int)preg_replace('/[.]/', '', $wpcf7_plugin_data['Version']);
+		// If CF7 version is < 3.9.0
+		if ( $wpcf7_version < 390 ) {
+			echo '<div class="error"><p><strong>Warning: </strong>Contact Form 7 - Success Page Redirects requires that you have the latest version of Contact Form 7 installed. Please upgrade now.</p></div>';
+		}
+	}
+	// If it's not installed and activated, throw an error
+    else {
 	    echo '<div class="error"><p>Contact Form 7 is not activated. The Contact Form 7 Plugin must be installed and activated before you can use Success Page Redirects.</p></div>';
 	}
-	// if ( (int)preg_replace('/[.]/', '', get_plugin_data( plugins_url() . '/contact-form-7/wp-contact-form-7.php', false, false)['Version']) < 394 ) {
-		// echo '<div class="error"><p><strong>Warning: </strong>Contact Form 7 - Success Page Redirects requires that you have the latest version of Contact Form 7 installed. Please upgrade now.</p></div>';
-	// }
 }
 add_action( 'admin_notices', 'cf7_success_page_admin_notice' );
 
+
 /**
- * Disable Contacr Form 7 JavaScript completely
+ * Disable Contact Form 7 JavaScript completely
  */
 add_filter( 'wpcf7_load_js', '__return_false' );
 

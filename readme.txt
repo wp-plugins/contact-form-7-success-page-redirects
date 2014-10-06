@@ -9,11 +9,13 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 An add-on for Contact Form 7 that provides a straightforward method to redirect visitors to success pages or thank you pages.
 
+
 == Description ==
 
 An add-on for Contact Form 7 (CF7) that provides a straightforward method to redirect visitors to success pages or thank you pages, if their messages are successfully delivered. If no message is sent, or if there is an error with the form, the user will not be redirected.
 
 **NOTE:** This plugin requires Contact Form 7 version 3.9 or later. 
+
 
 == Installation ==
 
@@ -23,11 +25,16 @@ An add-on for Contact Form 7 (CF7) that provides a straightforward method to red
 
 Please note that [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) (version 3.9 or later) must be installed and activated in order for this plugin to be functional.
 
+
 == Frequently Asked Questions ==
 
 = Why doesn't this plugin do *insert feature here*? =
 
 If you have a feature suggestion, I'd love to hear about it. Feel free to leave a message on the "Support" tab of the plugin page, and I'll follow up as soon as possible.
+
+= My forms are no longer submitting, with this plugin installed. Why? =
+
+Please make sure that you have updated to the latest version of Contact Form 7. Success Page Redirects only supports versions 3.9.0 or higher. If everything is up to date and you're still experiencing problems, please post a message on the [Support Page](https://wordpress.org/support/plugin/contact-form-7-success-page-redirects).
 
 = Why are my forms no longer using Ajax, when I install this plugin? =
 
@@ -38,7 +45,11 @@ In order to ensure that all forms are submitted properly, and that users can be 
 
 1. The plugin will add a "Redirect to:" dropdown that contains all of your existing pages as options. This is set on each of the "Edit Contact Form" pages.
 
+
 == Changelog ==
+
+= 1.1.2 =
+* Provides clearer admin notices regarding necessary plugin dependencies 
 
 = 1.1.1 =
 * Fixes an issue that prevented some forms from submitting and redirecting
@@ -46,6 +57,7 @@ In order to ensure that all forms are submitted properly, and that users can be 
 
 = 1.1.0 =
 * Initial version
+
 
 == Upgrade Notice ==
 
