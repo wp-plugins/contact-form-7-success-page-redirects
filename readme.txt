@@ -1,6 +1,6 @@
 === Contact Form 7 - Success Page Redirects ===
 Contributors: rnevius
-Tags: contact form 7, cf7, contact form, redirect, forms, form redirect, form, success pages, thank you pages, contact form 7 add-on, cf7 redirect, cf7 success, contact form 7 redirect, contact form 7 success
+Tags: contact form 7, cf7, contact forms 7, contact form, redirect, forms, form redirect, form, success pages, thank you pages, contact form 7 add-on, cf7 redirect, cf7 success, contact form 7 redirect, contact form 7 success
 Requires at least: 3.8.2
 Tested up to: 4.0
 Stable tag: trunk
@@ -47,6 +47,9 @@ In order to ensure that all forms are submitted properly, and that users can be 
 
 
 == Changelog ==
+
+= 1.1.2 =
+* CF7 id property is no longer accessible. Switched to the id() method, so that form changes can be properly saved in the admin.
 
 = 1.1.2 =
 * Provides clearer admin notices regarding necessary plugin dependencies 

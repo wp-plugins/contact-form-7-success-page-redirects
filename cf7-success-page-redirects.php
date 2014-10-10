@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Contact Form 7 - Success Page Redirects
  * Description: An add-on for Contact Form 7 that provides a straightforward method to redirect visitors to success pages or thank you pages.
- * Version: 1.1.2
+ * Version: 1.1.3
  * Author: Ryan Nevius
  * Author URI: http://www.ryannevius.com
  * License: GPLv3
@@ -62,8 +62,8 @@ function cf7_success_page_metaboxes( $post ) {
 }
 
 // Store Success Page Info
-function cf7_success_page_save_contact_form( $cf7 ) {
-	$cf7_id = $cf7->id;
+function cf7_success_page_save_contact_form( $contact_form ) {
+	$contact_form_id = $contact_form->id();
 
 	if ( !isset( $_POST ) || empty( $_POST ) || !isset( $_POST['cf7-redirect-page-id'] ) ) {
 		return;
@@ -74,7 +74,7 @@ function cf7_success_page_save_contact_form( $cf7 ) {
 			return;
 		}
 		// Update the stored value
-        update_post_meta( $cf7_id, '_cf7_success_page_key', $_POST['cf7-redirect-page-id'] );
+        update_post_meta( $contact_form_id, '_cf7_success_page_key', $_POST['cf7-redirect-page-id'] );
     }
 }
 add_action( 'wpcf7_save_contact_form', 'cf7_success_page_save_contact_form' );
@@ -83,11 +83,11 @@ add_action( 'wpcf7_save_contact_form', 'cf7_success_page_save_contact_form' );
 /**
  * Redirect the user, after a successful email is sent
  */
-function cf7_success_page_form_submitted( $cf7 ) {
-	$cf7_id = $cf7->id;
+function cf7_success_page_form_submitted( $contact_form ) {
+	$contact_form_id = $contact_form->id();
 
 	// Send us to a success page, if there is one
-	$success_page = get_post_meta( $cf7_id, '_cf7_success_page_key', true );
+	$success_page = get_post_meta( $contact_form_id, '_cf7_success_page_key', true );
 	if ( !empty($success_page) ) {
 		wp_redirect( get_permalink( $success_page ) );
 	    die();
