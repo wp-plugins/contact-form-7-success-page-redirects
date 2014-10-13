@@ -20,8 +20,8 @@ An add-on for Contact Form 7 (CF7) that provides a straightforward method to red
 == Installation ==
 
 1. Unzip the downloaded plugin archive.
-1. Upload the inner 'contact-form-7-success-page-redirects' directory to the '/wp-content/plugins/' directory on your web server.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
+2. Upload the inner 'contact-form-7-success-page-redirects' directory to the '/wp-content/plugins/' directory on your web server.
+3. Activate the plugin through the 'Plugins' menu in WordPress.
 
 Please note that [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) (version 3.9 or later) must be installed and activated in order for this plugin to be functional.
 
