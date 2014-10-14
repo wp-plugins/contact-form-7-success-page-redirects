@@ -48,6 +48,9 @@ In order to ensure that all forms are submitted properly, and that users can be 
 
 == Changelog ==
 
+= 1.1.4 =
+* Upgrade process for verifying that Contact Form 7 is installed and up to date. 
+
 = 1.1.3 =
 * CF7 id property is no longer accessible. Switched to the id() method, so that form changes can be properly saved in the admin.
 
