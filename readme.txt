@@ -2,7 +2,7 @@
 Contributors: rnevius
 Tags: contact form 7, cf7, contact forms 7, contact form, redirect, forms, form redirect, form, success pages, thank you pages, contact form 7 add-on, cf7 redirect, cf7 success, contact form 7 redirect, contact form 7 success
 Requires at least: 3.8.2
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: trunk
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -47,6 +47,9 @@ In order to ensure that all forms are submitted properly, and that users can be 
 
 
 == Changelog ==
+
+= 1.1.5 =
+* Fixes a bug where duplicating a contact form wouldn't copy over the redirect field from the original form. 
 
 = 1.1.4 =
 * Upgrade process for verifying that Contact Form 7 is installed and up to date. 
