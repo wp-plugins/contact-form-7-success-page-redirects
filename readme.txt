@@ -48,8 +48,11 @@ In order to ensure that all forms are submitted properly, and that users can be 
 
 == Changelog ==
 
+= 1.1.6 =
+* Fixes a bug where duplicating a contact form from the form list view wouldn't copy over the redirect field. 
+
 = 1.1.5 =
-* Fixes a bug where duplicating a contact form wouldn't copy over the redirect field from the original form. 
+* Fixes a bug where duplicating a contact form wouldn't copy over the redirect field from the original form edit page. 
 
 = 1.1.4 =
 * Upgrade process for verifying that Contact Form 7 is installed and up to date. 
